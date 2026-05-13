@@ -1,11 +1,9 @@
-import os
+from app.services.project_paths import get_frontend_src_root
 
 
 def update_app_jsx(project_name, component_name, filename):
 
-    app_jsx_path = f"""
-app/generated_projects/{project_name}/frontend/src/App.jsx
-""".strip()
+    app_jsx_path = get_frontend_src_root(project_name) / "App.jsx"
 
     filename_without_extension = filename.replace(".jsx", "")
 

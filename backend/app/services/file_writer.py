@@ -1,6 +1,8 @@
 import os
 import re
 
+from app.services.project_paths import get_component_path
+
 
 def sanitize_filename(filename):
 
@@ -17,16 +19,14 @@ def save_react_component(project_name, filename, code):
 
     filename = sanitize_filename(filename)
 
-    base_path = f"app/generated_projects/{project_name}/frontend/src/components"
+    file_path = get_component_path(project_name, filename)
 
-    os.makedirs(base_path, exist_ok=True)
-
-    file_path = os.path.join(base_path, filename)
+    os.makedirs(file_path.parent, exist_ok=True)
 
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(code)
 
-    return file_path
+    return str(file_path)
 
 def read_file(file_path):
 

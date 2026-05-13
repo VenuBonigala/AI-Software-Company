@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function LoginPage() 
+function LoginPage() {
   const {
     register,
     handleSubmit,
@@ -20,7 +20,7 @@ function LoginPage()
           data.email === "demo@example.com" && data.password === "demo123"
             ? res()
             : rej(new Error("Invalid credentials"));
-        }, 1500),
+        }, 1500)
       );
       navigate("/dashboard");
     } catch (err) {
