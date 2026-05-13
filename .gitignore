@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Virtual Environment
+venv/
+.env
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Generated projects build files
+backend/app/generated_projects/**/frontend/node_modules/
+backend/app/generated_projects/**/frontend/dist/
+
+# CrewAI traces
+.traces/
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage
+coverage/
+htmlcov/
+
+# Temporary files
+tmp/
+temp/
+
+# Environment configs
+.env.local
+.env.production
